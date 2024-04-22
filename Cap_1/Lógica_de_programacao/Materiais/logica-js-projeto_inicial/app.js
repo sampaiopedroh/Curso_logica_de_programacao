@@ -1,14 +1,22 @@
 alert("Boas vindas ao jogo do número secreto !!!");
-let num_secreto = 29;
-let pergunta = prompt("Escolha um número entre 1 e 30");
-if (num_secreto == pergunta){
-    console.log("Parabéns");
+let num_secreto = parseInt((Math.random() * 100) + 1);
+console.log(num_secreto);
+let resposta = prompt("Escolha um número:");;
+qnt = 1;
+while(num_secreto != resposta){
+    qnt++;
+    if (resposta > num_secreto){
+        alert(`Um pouco menos de ${resposta}`);
+    }
+    else if(resposta < num_secreto){
+        alert(`Um pouco mais de ${resposta}`);
+    }
+    resposta = prompt(`Errou,  ${qnt}˚ tentativas:`);
+}
+let palavraTentativa = qnt > 1 ? "tentativas" : "tentativa"
+if (num_secreto == resposta){
+    alert(`Parabéns, o número secreto é ${num_secreto}\nVocê precisou de ${qnt} ${palavraTentativa}`);
 }
 else{
-    if (pergunta > num_secreto){
-        console.log("Um pouco menos");
-    }
-    else{
-        console.log("Um pouco mais");
-    }
+    alert("Perdeu :(")
 }
