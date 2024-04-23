@@ -1,7 +1,8 @@
 alert("Boas vindas ao jogo do número secreto !!!");
-let num_secreto = parseInt((Math.random() * 100) + 1);
+let tamanho = prompt("Escolha o tamanho do conjunto:");
+let num_secreto = parseInt((Math.random() * tamanho) + 1);
 console.log(num_secreto);
-let resposta = prompt("Escolha um número:");;
+let resposta = prompt(`Escolha um número de 1 à ${tamanho}:`);;
 qnt = 1;
 while(num_secreto != resposta){
     qnt++;
