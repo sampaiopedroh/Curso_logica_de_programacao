@@ -11,6 +11,9 @@ function sortear(){
     while (de > ate){
         mensagem.innerHTML = 'Selecione um conjunto válido !!!';
     }
+    while(quantidade < (ate - de)){
+        mensagem.innerHTML = 'Selecione um conjunto válido !!!';
+    }
 
     let numsSorteados = [];
     let num;
