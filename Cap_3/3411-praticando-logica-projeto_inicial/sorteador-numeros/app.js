@@ -10,9 +10,11 @@ function sortear(){
     let mensagem = document.getElementById('resultados');
     while (de > ate){
         mensagem.innerHTML = 'Selecione um conjunto válido !!!';
+        reiniciar();
     }
     while(quantidade < (ate - de)){
         mensagem.innerHTML = 'Selecione um conjunto válido !!!';
+        reiniciar();
     }
 
     let numsSorteados = [];
